@@ -8,15 +8,15 @@ Most of the code was written by Thierry Monteil for the project sage-debian-live
 http://sagedebianlive.metelu.net/
 
 Based on this code it should be possible to develope a Live CD version of sage (<700 MB).
-Currently there is also interest in building small Debian Linux systems in the style of "Puppy Linux" on this List:
+Currently there is also interest in building small Debian Linux systems in the style of 
+"Puppy Linux" on this list:
 http://www.murga-linux.com/puppy/viewtopic.php?t=90660
 
 Build your own small Debian Live system
 ===================================
 
 It is possible to build your own Sage Debian Live. You should run Debian
-wheezy. 
-Derivatives whose version of live-build package is 3.x (like
+wheezy. Derivatives whose version of live-build package is 3.x (like
 Ubuntu>=12.04 or Debian sid) should work as well but are not tested.
 Other Linuxes with Debian live build 3.x install should work too, but are not tested.
 
