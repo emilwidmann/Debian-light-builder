@@ -14,7 +14,7 @@
 
 
 add_packages "wireless" "wireless-tools wpasupplicant firmware-linux-free"
-add_packages "wireless" "ndisgtk ndiswrapper-utils-1.9"
+add_packages "wireless" "ndisgtk ndiswrapper-utils-1.9 wicd"
 
 if [ "${NON_FREE_WIRELESS}" = "1" ]
 then

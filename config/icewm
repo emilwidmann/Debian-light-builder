@@ -16,4 +16,4 @@
 IMAGE='iso-hybrid'
 RECOMMENDS='false'
 
-MODULES='icewm wireless keepinstall'
+MODULES='icewm wireless'
