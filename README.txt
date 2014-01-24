@@ -85,6 +85,11 @@ Launch the build
 From the source directory, run ::
 
     ./build.sh
+    
+This will install the live-build tools and apt-cacher (Choose to start
+apt-cahcer as daemon at the prompt). If you are running apt-cacher from 
+a live system und you are low on RAM, you should change the cache_dir in
+/etc/apt-cacher/apt-cacher.conf to be somewhere on a mounted drive.
 
 If you use a custom ./config/customconfig file to overwrite some default
 variables, run ::
