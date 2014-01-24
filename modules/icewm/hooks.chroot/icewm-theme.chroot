@@ -1,0 +1,19 @@
+#!/bin/sh
+
+## configures a cool ICEWM theme in debian live chroot
+## Copyright (C) 2014 emil widmann
+## delete all icewm themes and leave just the one I give in /includes.chroot
+
+cd /usr/share/icewm/themes
+rm -r yellowmotif
+rm -r motif
+rm -r win95
+rm -r warp4
+rm -r warp3
+rm -r nice2
+#rm -r nice
+rm -r metal2
+rm -r Infadel2
+rm -r icedesert
+rm -r gtk2
+rm gtk

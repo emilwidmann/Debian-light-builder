@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Xfe-File
+Exec=xfe
+Icon=/usr/share/pixmaps/folder48.png
+Terminal=false
+Type=Application
+Categories=Application;FileManager
+StartupNotify=true

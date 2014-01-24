@@ -1,0 +1,109 @@
+ThemeName="faxad"
+ThemeDescription="Un tema azul inspirado en KDE 4.5"
+ThemeAuthor="Ren Canteros Sousa <ren.kudun@gmx.com>"
+License="GPL"
+Look=flat
+
+TitleBarHeight=18
+TitleBarCentered=1
+TitleBarJustify=50
+TitleButtonsLeft="s"
+TitleButtonsRight="xmi"
+TitleButtonsSupported="xmis"
+ShowMenuButtonIcon=0 # 0/1
+RolloverButtonsSupported=1
+TaskBarClockLeds=1
+
+BorderSizeX=4
+BorderSizeY=2
+CornerSizeX=22
+CornerSizeY=22
+DlgBorderSizeX=4
+DlgBorderSizeY=2
+
+ColorNormalBorder="rgb:6a/8e/b8"
+ColorActiveBorder="rgb:6a/8e/b8"
+ColorActiveTitleBar="rgb:f5/f5/f5"
+ColorNormalTitleBar="rgb:f5/f5/f5"
+ColorNormalButton="rgb:f5/f5/f5"
+ColorActiveButton="rgb:f5/f5/f5"
+ColorNormalTitleBarText="rgb:98/98/98"
+ColorActiveTitleBarText="rgb:14/16/1e"
+
+ColorNormalMenu="rgb:ab/aa/a9"
+ColorActiveMenuItem="rgb:d5/d5/d5"
+ColorNormalMenuItemText="rgb:2c/2b/2a"
+ColorActiveMenuItemText="rgb:2c/2b/2a"
+ColorDisabledMenuItemText="rgb:ab/aa/a9"
+
+ColorMoveSizeStatus="rgb:ea/e9/e9"
+ColorMoveSizeStatusText="rgb:14/16/1e"
+
+ColorDefaultTaskBar="rgb:7d/a8/cc"
+ColorNormalTaskBarApp="rgb:7d/a8/cc"
+ColorNormalTaskBarAppText="white"
+ColorActiveTaskBarApp="rgb:7d/a8/cc"
+ColorActiveTaskBarAppText="rgb:14/17/15"
+ColorMinimizedTaskBarApp="rgb:7d/a8/cc"
+ColorMinimizedTaskBarAppText="white"
+
+ColorListBox="rgb:f5/f5/f5"
+ColorListBoxText="rgb:14/16/1e"
+ColorListBoxSelection="rgb:d5/d5/d5"
+ColorListBoxSelectionText="rgb:14/16/1e"
+
+ColorCPUStatusUser="rgb:2d/8d/c0"
+ColorCPUStatusSystem="rgb:e7/e7/e8"
+ColorCPUStatusNice="rgb:38/78/a6"
+ColorCPUStatusIdle="black"
+ColorNetSend="rgb:e2/e1/e0"
+ColorNetReceive="rgb:99/99/99"
+ColorNetIdle="rgb:44/59/66"
+
+DesktopBackgroundColor="rgb:04/6e/98"
+DesktopBackgroundCenter = 1
+DesktopBackgroundScaled = 1
+DesktopBackgroundImage = 'pussy_1920x1440.jpg'
+
+ColorToolTip="rgb:ea/e9/e9"
+ColorToolTipText="rgb:14/16/1e"
+ColorLabel="rgb:ea/e9/e9"
+ColorLabelText="rgb:14/16/1e"
+
+ColorQuickSwitch="rgb:f5/f5/f5"
+ColorQuickSwitchText="rgb:14/16/1e"
+ColorQuickSwitchActive="rgb:d5/d5/d5"
+
+ColorActiveWorkspaceButtonText="white"
+ColorNormalWorkspaceButtonText="black"
+
+ColorClock=""
+ColorClockText="white"
+
+TitleFontName="-*-verdana-bold-r-normal-*-13-*-*-*-p-*-koi8-r"
+TitleFontNameXft="verdana:size=10:bold"
+MenuFontNameXft	           =    "Snap:size=10,sans-serif:size=8"
+MinimizedWindowFontNameXft =    "Snap:size=10,sans-serif:size=8"
+ActiveButtonFontNameXft    =    "Snap:size=10,sans-serif:size=8:bold"
+NormalButtonFontNameXft    =    "Snap:size=10,sans-serif:size=8"
+QuickSwitchFontNameXft     =    "Snap:size=10,sans-serif:size=8"
+ListBoxFontNameXft         =    "Snap:size=10,sans-serif:size=8"
+StatusFontNameXft          =    "Snap:size=10,sans-serif:size=8"
+ToolTipFontNameXft         =    "Snap:size=10,sans-serif:size=8"
+ActiveTaskBarFontNameXft   =    "Snap:size=10,sans-serif:size=8:bold"
+NormalTaskBarFontNameXft   =    "Snap:size=10,sans-serif:size=8"
+ClockFontNameXft           =    "Snap:size=10,sans-serif:size=8"
+ApmFontNameXft             =    "Snap:size=10,sans-serif:size=8"
+
+MenuFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+MinimizedWindowFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ActiveButtonFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+NormalButtonFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+QuickSwitchFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ListBoxFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+StatusFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ToolTipFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ActiveTaskBarFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+NormalTaskBarFontName	=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ClockFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"
+ApmFontName		=	"-artwiz-snap-regular-r-normal-sans-10-*-*-*-*-*-*-*"

@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#*****************************************************************************
+#   Copyright (C) 2012 Thierry Monteil <sage-debian-live!lma.metelu.net>
+#
+#  Distributed under the terms of the GNU General Public License (GPL)
+#  as published by the Free Software Foundation; either version 2 of
+#  the License, or (at your option) any later version.
+#                  http://www.gnu.org/licenses/
+#*****************************************************************************
+#
+# This boot-time script allows straightforward persistence of the homedir for 
+# the debian-live system. It requires fuse-posixovl and bindfs packages.
+
+KEY_MOUNT_POINT='/lib/live/mount/medium'
+
+mount -o remount,rw ${KEY_MOUNT_POINT}
+if [ "$(grep -c " ${KEY_MOUNT_POINT} vfat " /proc/mounts)" = "1" ]
+then
+    mount.posixovl -F ${KEY_MOUNT_POINT}
+fi
+bindfs -o nonempty -u 1000 -g 1000 ${KEY_MOUNT_POINT} /home
+

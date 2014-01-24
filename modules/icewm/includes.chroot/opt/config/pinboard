@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<pinboard>
+  <backdrop style="Stretched">/opt/background/default</backdrop>
+  <icon x="128" y="96" label="edit">/usr/share/applications/default.Browser.desktop</icon>
+  <icon x="128" y="32" label="paint">/usr/share/applications/default.</icon>
+  <icon x="32" y="96" label="File">/usr/share/applications/default.Filemanager.desktop</icon>
+  <icon x="32" y="160" label="ROX">/usr/bin/rox</icon>
+  <icon x="32" y="32" label="ROX">/usr/share/applications/default.home.desktop</icon>
+  <icon x="32" y="288" label="www">/usr/bin/iceweasel</icon>
+  <icon x="32" y="224" label="Save">/opt/bin/mk-save.gtkdlg</icon>
+</pinboard>

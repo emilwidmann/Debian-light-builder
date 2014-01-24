@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# frisbee-tray &
+# sleep 2
+# volumeicon &
+# sleep 2
+# desktop_drive_icons &
+# sleep 2
+/usr/bin/rox -p /opt/config/pinboard &
+# sleep 2
+# /opt/bin/start-up &
+
