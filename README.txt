@@ -96,17 +96,21 @@ config by running::
 
     ./build.sh cd customconfig
     
-Right at the moment there are some simple setups with 3 small window managers present.
-The Icewm window manager is the most eleborate one and has examples how to handel chroot.hooks and binary includes.
+Right at the moment there are some simple setups with 3 small window 
+managers present. The Icewm window manager is the most eleborate one and 
+has examples how to handle chroot.hooks and binary includes.
 
  ./build.sh cd icewm
  
- The result is an image or iso file which can be dd -ed to a stick or burned to a CD. See the next section how to directly install to hd.
+The result is an image or iso file which can be dd -ed to a stick or burned 
+to a CD. See the next section how to directly install to hd.
   
  
- Test the image
- ----------------------
- The easiest way for testing is to install a virtual machine (e.g. apt-get install virtualbox) and test the iso there.
+Test the image
+----------------------
+The easiest way for testing is to install a virtual machine.
+(e.g. apt-get install virtualbox) Attach the iso file in your $BUILD directory
+and test the iso in the VM.
  
 Another possibility is to make a frugal install to your hd. Mount the image, e.g. 
 mkdir mpt
@@ -116,9 +120,11 @@ cd mpt/live
 copy the files vmlinuz, initrd.img and filesystem.squashfs to a /live folder on one of your hd partitions
 Add a line in your bootloader like (example for grub legacy):
 
-title Sage Debian Live
+title Debian-live-test
   root (hd0,2)
   kernel /live/vmlinuz boot=live config persistent quickreboot noprompt autologin
   initrd /live/initrd.img 
+
+Reboot your computer.
 
  
