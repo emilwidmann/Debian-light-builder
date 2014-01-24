@@ -8,15 +8,15 @@ Most of the code was written by Thierry Monteil for the project sage-debian-live
 http://sagedebianlive.metelu.net/
 
 Based on this code it should be possible to develope a Live CD version of sage (<700 MB).
-Currently there is also interest in building small Debian Linux systems in the style of "Puppy Linux" on this List:
+Currently there is also interest in building small Debian Linux systems in the style of 
+"Puppy Linux" on this list:
 http://www.murga-linux.com/puppy/viewtopic.php?t=90660
 
 Build your own small Debian Live system
 ===================================
 
 It is possible to build your own Sage Debian Live. You should run Debian
-wheezy. 
-Derivatives whose version of live-build package is 3.x (like
+wheezy. Derivatives whose version of live-build package is 3.x (like
 Ubuntu>=12.04 or Debian sid) should work as well but are not tested.
 Other Linuxes with Debian live build 3.x install should work too, but are not tested.
 
@@ -85,6 +85,11 @@ Launch the build
 From the source directory, run ::
 
     ./build.sh
+    
+This will install the live-build tools and apt-cacher (Choose to start
+apt-cahcer as daemon at the prompt). If you are running apt-cacher from 
+a live system und you are low on RAM, you should change the cache_dir in
+/etc/apt-cacher/apt-cacher.conf to be somewhere on a mounted drive.
 
 If you use a custom ./config/customconfig file to overwrite some default
 variables, run ::
@@ -96,17 +101,21 @@ config by running::
 
     ./build.sh cd customconfig
     
-Right at the moment there are some simple setups with 3 small window managers present.
-The Icewm window manager is the most eleborate one and has examples how to handel chroot.hooks and binary includes.
+Right at the moment there are some simple setups with 3 small window 
+managers present. The Icewm window manager is the most eleborate one and 
+has examples how to handle chroot.hooks and binary includes.
 
  ./build.sh cd icewm
  
- The result is an image or iso file which can be dd -ed to a stick or burned to a CD. See the next section how to directly install to hd.
+The result is an image or iso file which can be dd -ed to a stick or burned 
+to a CD. See the next section how to directly install to hd.
   
  
- Test the image
- ----------------------
- The easiest way for testing is to install a virtual machine (e.g. apt-get install virtualbox) and test the iso there.
+Test the image
+----------------------
+The easiest way for testing is to install a virtual machine.
+(e.g. apt-get install virtualbox) Attach the iso file in your $BUILD directory
+and test the iso in the VM.
  
 Another possibility is to make a frugal install to your hd. Mount the image, e.g. 
 mkdir mpt
@@ -116,9 +125,13 @@ cd mpt/live
 copy the files vmlinuz, initrd.img and filesystem.squashfs to a /live folder on one of your hd partitions
 Add a line in your bootloader like (example for grub legacy):
 
-title Sage Debian Live
+title Debian-live-test
   root (hd0,2)
   kernel /live/vmlinuz boot=live config persistent quickreboot noprompt autologin
   initrd /live/initrd.img 
+
+Reboot your computer.
+
+contact: emil.widmann!!gmail.cXX
 
  
