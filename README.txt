@@ -127,4 +127,6 @@ title Debian-live-test
 
 Reboot your computer.
 
+contact: emil.widmann!!gmail.cXX
+
  
