@@ -1,0 +1,48 @@
+#!/bin/sh
+# automount.sh v.01
+# Mounts all drives/partitions in /media directory
+# v.01 emil widmann at gmail com LGPL Jan 2012
+# possible extension - use disk labels for directory names!
+
+# BUILD List of drives / partitions
+PARTS=`grep '[hs]d[a-z][0-9]' /proc/partitions | tr -s ' ' | cut -d' ' -f5 | tr '\n' ' '`
+for PART in $PARTS
+do
+   MNTPT=`df | grep "/dev/${PART}" | tr -s ' ' | cut -f 6 -d ' '`
+   FS=`fdisk -l | grep "$PART" | tr -d '*' | tr -s ' ' | cut -f 6 -d ' '`   # Get The Filesystem
+   FS1=`fdisk -l | grep "$PART" | tr -d '*' | tr -s ' ' | cut -f 7 -d ' '`   # Get The Filesystem extension
+   case $FS in
+      Linux)
+         case $FS1 in
+         swap)
+            echo $PART "is a swap partition - can't mount"
+            ;;
+         *)
+            mkdir /media/$PART
+            mount /dev/$PART /media/$PART
+            echo "mounting" $PART "to /media/"$PART
+            ;;
+         esac
+         ;;
+      Extended)
+         echo $PART "is an Extended Partition - not mounted"
+         ;;
+       Hidden)   # probably ntfs
+         mkdir /media/$PART
+         mount -t ntfs-3g -o nls=utf8,umask=0222 /dev/$PART /media/$PART
+         echo "mounting" $PART "to /media/"$PART
+         ;;
+      W95) # probably vfat
+         mkdir /media/$PART
+         mount -t vfat -o iocharset=utf8,umask=000 /dev/$PART /media/$PART
+         echo "mounting" $PART "to /media/"$PART
+         ;;
+      *)   
+         echo "Unknown Filesystem" $FS $FS1 "- "      
+         mkdir /media/$PART
+	 echo "try mounting" $PART "to /media/"$PART
+         mount /dev/$PART /media/$PART
+         ;;
+      esac
+   done	
+

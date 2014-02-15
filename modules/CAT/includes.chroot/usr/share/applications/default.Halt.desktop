@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Shutdown	
+Exec=rox /opt/bin/shutdown
+Icon=/usr/share/pixmaps/shutdown48.png
+Terminal=false
+Type=Application
+Categories=System;Rox;shutdown
+StartupNotify=true

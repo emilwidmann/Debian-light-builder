@@ -16,15 +16,19 @@
 
 
 ## First initialisation: install needed packages on your machine.
-if [ "x${1}" = "xinstall" ] ;
-then
-    sudo apt-get install live-build live-boot live-config syslinux kpartx apt-cacher
-    exit 0
-fi
-
 
 BASE_DIR="$(pwd)"
+LOCAL_REPO=${BASE_DIR}/repo
 
+if [ "x${1}" = "xinstall" ] ;
+then
+    sudo apt-get update
+    sudo apt-get install live-build live-boot live-config syslinux kpartx apt-cacher
+    exit 0
+ 
+fi
+
+cd ${BASE_DIR}
 
 add_packages()
 {
@@ -70,7 +74,7 @@ cd "${BUILD_DIR}"
 
 
 ARCHIVES_AREAS='main'
-if [ "${NON_FREE_WIRELESS}" = "1" ]
+if [ "${NON_FREE_WIRELESS}" != "0" ]
 then
     ARCHIVES_AREAS='main contrib non-free'
 fi
@@ -84,9 +88,11 @@ lb config --binary-images "${IMAGE}" \
     --archive-areas "${ARCHIVES_AREAS}" \
     --mode "debian" \
     --apt-recommends "${RECOMMENDS}" \
+    --apt-indices "${INDICES}"\
     --bootappend-live "boot=live config locales=${BOOT_LOCALE} keyboard-layouts=${BOOT_KEYBOARD}" \
     --architectures "${ARCHITECTURE}" \
     --linux-flavours "${LINUX_FLAVOURS}" \
+    --compression "${COMPRESS}"\
     --parent-mirror-bootstrap "${LOCAL_REPOSITORY}" \
     --parent-mirror-chroot "${LOCAL_REPOSITORY}" \
     --parent-mirror-binary "${BINARY_REPOSITORY}" \
@@ -163,4 +169,9 @@ EOF
     sudo syslinux -d /live/syslinux "${PART_LOOP}"
     sudo kpartx -d "${IMG_NAME}"
 fi
+
+# Fix 02-02-14 : seems like a bug, keyboard is reset with every live-builder call
+# so set it back to original - ew 
+setxkbmap de
+
 

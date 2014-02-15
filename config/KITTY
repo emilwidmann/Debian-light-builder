@@ -1,0 +1,16 @@
+#!/bin/bash
+
+#*****************************************************************************
+#   Copyright (C)  2014 by Emil Widmann <emil.widmann!gmail.com>
+#  Distributed under the terms of the  (GPL) 2
+#*****************************************************************************
+
+
+IMAGE='iso-hybrid'
+RECOMMENDS='false'
+INDICES='false'
+LINUX_FLAVOURS='486'
+COMPRESS='xz'
+
+NON_FREE_WIRELESS='0'
+MODULES='CAT wireless2  medium-rw icewm keep keyboard stripped'

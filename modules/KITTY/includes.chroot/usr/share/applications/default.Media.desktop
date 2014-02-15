@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Root	
+Exec=rox /media
+Icon=/usr/share/pixmaps/drive48.png
+Terminal=false
+Type=Application
+Categories=System;Rox;Drives
+StartupNotify=true

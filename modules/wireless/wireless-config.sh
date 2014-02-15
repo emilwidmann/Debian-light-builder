@@ -29,3 +29,7 @@ then
     add_packages "wireless" "firmware-b43legacy-installer firmware-b43-installer"
 fi
 
+if [ "${NON_FREE_WIRELESS}" = "2" ]
+then
+   add_packages "wireless" "firmware-b43legacy-installer firmware-b43-installer"
+fi

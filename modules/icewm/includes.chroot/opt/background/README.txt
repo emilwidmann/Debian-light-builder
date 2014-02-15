@@ -1,0 +1,1 @@
+Drag picture on wallpaper script to change screen background picture

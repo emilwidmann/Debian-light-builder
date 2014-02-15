@@ -1,26 +1,23 @@
 #!/bin/bash
 
-#
 #*****************************************************************************
-#   Copyright (C) 2012 Thierry Monteil <sage-debian-live!lma.metelu.net>
-#
-#  Distributed under the terms of the GNU General Public License (GPL)
-#  as published by the Free Software Foundation; either version 2 of
-#  the License, or (at your option) any later version.
-#                  http://www.gnu.org/licenses/
+#   Copyright (C) 2014 Emil Widmann - GPL 2.0 <emil.widmann!!gmail.com
 #*****************************************************************************
-#
-# This is the install script of the openbox module. It is supposed to be used
-# instead of the xfce4 modules for light builds.
 
-add_packages "icewm" "nodm xserver-xorg icewm menu rox-filer xfe iceweasel"
-add_packages "desktop" "xterm sudo user-setup eject alsa-base alsa-utils"
+add_packages "icewm" "xserver-xorg icewm menu rox-filer volumeicon-alsa"
 
 # hooks which will be executed in the chroot system
-cp "${BASE_DIR}/modules/icewm/hooks.chroot/*" "${BUILD_DIR}/config/hooks/"
+cp -r "${BASE_DIR}/modules/icewm/hooks" "${BUILD_DIR}/config/"
 
 # files to include in the chroot system (includes.chroot):
-# /usr/share/icewm/.. themes and configuration files
-# /opt.. Programms, apps and configurations not in Debian
 cp -r "${BASE_DIR}/modules/icewm/includes.chroot" "${BUILD_DIR}/config/"
 
+# packages to include in the chroot system (packages.chroot):
+# this didn't work for me, so I use local apt repository (setup in ./build.sh install)
+cp -r "${BASE_DIR}/modules/icewm/packages.chroot" "${BUILD_DIR}/config/"
+
+# add local repo to list of valid repos in chroot:
+#echo "deb http://localhost/${BASE_DIR}/repo ./" >  ${BUILD_DIR}/config/archives/local-repository.list.chroot
+
+# copy public key to the chroot config directory
+#cp "${BASE_DIR}/repo/*.gpg" "${BUILD_DIR}/config/apt"

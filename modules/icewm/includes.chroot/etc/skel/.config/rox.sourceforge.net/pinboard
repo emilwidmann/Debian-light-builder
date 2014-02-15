@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<pinboard>
+  <backdrop style="Stretched">/opt/background/default</backdrop>
+  <icon x="64" y="32" label="Power">/usr/share/applications/default.Halt.desktop</icon>
+  <icon x="64" y="608" label="media">/usr/share/applications/default.Media.desktop</icon>
+  <icon x="64" y="544" label="apps">/usr/share/applications/default.Apps.desktop</icon>
+  <icon x="64" y="480" label="software">/usr/share/applications/default.Package.desktop</icon>
+  <icon x="64" y="416" label="www">/usr/share/applications/default.Browser.desktop</icon>
+  <icon x="64" y="352" label="config">/usr/share/applications/default.Config.desktop</icon>
+  <icon x="64" y="288" label="terminal">/usr/share/applications/default.Terminal.desktop</icon>
+  <icon x="64" y="224" label="edit">/usr/share/applications/default.Editor.desktop</icon>
+  <icon x="64" y="160" label="file">/usr/share/applications/default.Filemanager.desktop</icon>
+  <icon x="64" y="96" label="home">/usr/share/applications/default.Home.desktop</icon>
+</pinboard>

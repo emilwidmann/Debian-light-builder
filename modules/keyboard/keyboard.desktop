@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Keyboard switcher
+Name[fr]=Choix du clavier
+Name[en]=Keyboard switcher
+Comment=Change the keyboard layout
+Comment[fr]=Changer le clavier du système
+Comment[en]=Change the system keyboard layout
+Exec=/opt/bin/keyboard.sh
+Icon=/usr/share/pixmaps/keyboard-icon.svg
+Terminal=false
+Type=Application
+Categories=Utility;Desktop;Settings;System;
+StartupNotify=true
+

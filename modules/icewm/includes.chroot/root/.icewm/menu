@@ -1,0 +1,36 @@
+# This is an example for IceWM's menu definition file.
+#
+# Place your variants in /etc/X11/icewm or in $HOME/.icewm
+# since modifications to this file will be discarded when you
+# (re)install icewm.
+#
+prog "Terminal" xterm x-terminal-emulator -ls
+prog "Rox" rox rox
+prog "Editor" scite scite nedit
+prog "WWW" iceweasel iceweasel
+prog "Emaol" icedove icedove
+prog "Gimp" /usr/share/gimp/2.0/images/wilber-icon.png gimp
+separator
+menu Editors folder {
+        prog Scite scite scite
+	prog xfwrite xfwrite xfwrite 
+        prog Nano nano nano
+}
+menu "Office" folder {
+        prog "Writer" odt libreoffice --writer
+	prog "Calc" ods libreoffice --calc
+	prog "Impress" odp libreoffice --impress
+	prog "Base" odb libreoffice --base
+	prog "Pdf" pdf evince
+}
+menu Graphics folder {
+        prog "Gimp" gimp gimp
+	prog "Mtpaint" mtpaint mtpaint
+	prog "Mirage" mirage mirage
+}
+
+
+menufile Toolbar folder toolbar
+separator
+menuprog "Gnome" folder icewm-menu-gnome2 --list /usr/share/gnome/vfolders
+menuprog KDE folder icewm-menu-gnome2 --list /usr/share/applnk

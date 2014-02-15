@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=Apps	
+Exec=rox /usr/share/applications
+Icon=/usr/share/pixmaps/system48.png
+Terminal=false
+Type=Application
+Categories=System;Rox;Drives
+StartupNotify=true

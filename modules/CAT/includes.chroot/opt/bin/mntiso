@@ -1,0 +1,4 @@
+#!/bin/sh
+mkdir /mnt/iso
+mount $1 /mnt/iso
+rox /mnt/iso

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#*****************************************************************************
+#   Copyright (C)  2014 by Emil Widmann <emil.widmann!gmail.com>
+#  Distributed under the terms of the  (GPL) 2
+#*****************************************************************************
+
+
+IMAGE='iso-hybrid'
+RECOMMENDS='false'
+INDICES='false'
+LINUX_FLAVOURS='486'
+
+NON_FREE_WIRELESS='2'
+MODULES='CAT wireless icewm medium-rw keep media office printing keyboard stripped'

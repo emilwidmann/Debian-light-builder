@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#*****************************************************************************
+#   Copyright (C) 2014 Emil Widmann GPL 2.0
+#  NODM (No Display Manager) should login as root to X system, and be enabled by default
+#*****************************************************************************
+
+sed -i 's/^NODM_ENABLED.*/NODM_ENABLED=true/g' /etc/default/nodm
+
+

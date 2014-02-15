@@ -30,6 +30,8 @@ DISTRO='wheezy'
 # LINUX_FLAVOURS='686-pae 486'
 LINUX_FLAVOURS='686-pae'
 RECOMMENDS='true'
+INDICES='true'
+COMPRESS='gzip'
 
 DEBIAN_VERSION="${DISTRO}"
 LIVE_VERSION="$(lb --version)"

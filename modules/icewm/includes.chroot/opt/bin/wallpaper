@@ -1,0 +1,13 @@
+#!/bin/sh
+rox --RPC << EOF
+<?xml version="1.0"?>
+<env:Envelope xmlns:env="http://www.w3.org/2001/12/soap-envelope">
+ <env:Body xmlns="http://rox.sourceforge.net/SOAP/ROX-Filer">
+  <SetBackdrop>
+   <Filename>$1</Filename>
+   <Style>Stretch</Style>
+  </SetBackdrop>
+ </env:Body>
+</env:Envelope>
+
+EOF

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Name=ROX	
+Exec=sh -c "rox ~/.config"
+Icon=/usr/share/pixmaps/configuration48.png
+Terminal=false
+Type=Application
+Categories=Application;Configuration;default
+StartupNotify=true

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#*****************************************************************************
+#   (c) Emil WIdmann 2014 - GPL 2.0
+#*****************************************************************************
+# it is a copy of thierry Monteils persistence module without binding the home dir to the live medium
+# This boot-time script allows straightforward persistence of the homedir for 
+# the debian-live system. It requires fuse-posixovl packages.
+
+LIVE_MEDIUM='/lib/live/mount/medium'
+mount -o remount,rw ${LIVE_MEDIUM}
+if [ "$(grep -c " ${LIVE_MEDIUM} vfat " /proc/mounts)" = "1" ]
+then
+    mount.posixovl -F ${LIVE_MEDIUM}
+fi
+
