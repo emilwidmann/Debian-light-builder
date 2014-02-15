@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=Terminal	
-Exec=xterm
-Icon=/usr/share/pixmaps/console48.png
-Terminal=false
-Type=Application
-Categories=System;TerminalEmulator
-StartupNotify=true

@@ -1,9 +1,0 @@
-[Desktop Entry]
-Version=1.0
-Name=edit	
-Exec=xfwrite
-Icon=/usr/share/pixmaps/edit48.png
-Terminal=false
-Type=Application
-Categories=Application;Filemanager;default
-StartupNotify=true

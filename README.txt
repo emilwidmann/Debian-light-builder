@@ -55,20 +55,18 @@ along the file as comments. You can also overwrite the default variables by
 using a custom ./config/customconfig file. This is a good way to do so that
 your customizations will not be lost when you update the repository.
 It is important to change the Paths in the scripts to match your setup. 
-Please select the build directory outside the Debian-live-builder source tree.
 
 
 Select modules
 ~~~~~~~~~~~~~~
+./build.sh will use the /config/default file for configuration. 
+With ./build.sh config1 config2 ... it is possible to add more configuration files 
+which will overwrite the default values.
 
-All existing modules are selected by default. You can unselect some by
-removing them from the MODULES variable. The modules are located in the
-modules/ directory.
 
 
 Deeper customizations
 ~~~~~~~~~~~~~~~~~~~~~
-
 If you want to add some packages or files, or even add some hooks, you should
 create your own module instead of modifying the existing ones (see the example
 of ejcim2013 module), hence there won't be problems when those will be
@@ -84,29 +82,21 @@ Launch the build
 
 From the source directory, run ::
 
-    ./build.sh
+    ./build.sh install
     
 This will install the live-build tools and apt-cacher (Choose to start
 apt-cahcer as daemon at the prompt). If you are running apt-cacher from 
 a live system und you are low on RAM, you should change the cache_dir in
 /etc/apt-cacher/apt-cacher.conf to be somewhere on a mounted drive.
 
-If you use a custom ./config/customconfig file to overwrite some default
-variables, run ::
+To build module CAT run:
 
-    ./build.sh customconfig
+    ./build.sh CAT
 
-Note that config files can be stacked, for example you can customize a CD
-config by running::
-
-    ./build.sh cd customconfig
-    
-Right at the moment there are some simple setups with 3 small window 
-managers present. The Icewm window manager is the most eleborate one and 
+CAT is the most refined module. At the moment there are some simple
+additional setups with 2 small window managers (JWM, openbox). 
+The CAT module is the most eleborate one and 
 has examples how to handle chroot.hooks and binary includes.
-
- ./build.sh cd icewm
- 
 The result is an image or iso file which can be dd -ed to a stick or burned 
 to a CD. See the next section how to directly install to hd.
   
@@ -128,6 +118,14 @@ Add a line in your bootloader like (example for grub legacy):
 title Debian-live-test
   root (hd0,2)
   kernel /live/vmlinuz boot=live config persistent quickreboot noprompt autologin
+  initrd /live/initrd.img 
+
+It is possible to have several versions on the same partition. In that case the 
+live-media and live-media-path boot parameters are useful.
+
+title Test Partition
+  root (hd0,5)
+  kernel /live/vmlinuz boot=live  live-media=/dev/sda6 config quickreboot noprompt autologin
   initrd /live/initrd.img 
 
 Reboot your computer.
